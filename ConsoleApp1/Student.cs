@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-     class Student
+    class Student
     {
         string education;
         int groupNumber;
@@ -14,28 +14,24 @@ namespace ConsoleApp1
         //Person person;
 
         public string Education { get { return education; } set { education = value; } }
-        public int GroupNumber { get { return groupNumber; } set { groupNumber = value; } } 
+        public int GroupNumber { get { return groupNumber; } set { groupNumber = value; } }
         public Exam[] Exams { get { return exams; } set { exams = value; } }
         public double averageScore
         {
             get
             {
 
-              double averageScore = 0;
+                double averageScore = 0;
                 foreach (Exam exam in exams)
                     averageScore += exam.grade;
-                averageScore=  averageScore / exams.Length;
-                
-
-
-
+                averageScore = averageScore / exams.Length;
 
                 return averageScore;
 
 
             }
         }
-         
+
 
         //public Person Person { get { return person; } set { } }
 
@@ -53,9 +49,12 @@ namespace ConsoleApp1
         }
         void AddExams
             (Exam[] exams)
-        { this.exams = exams; }    
+        { this.exams = exams; }
 
     }
-   
-}
+    void AddExams ( params Exam[] )
+    {                                 
+
+    }
+    
 

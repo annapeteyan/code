@@ -21,10 +21,32 @@ class Exam
      
 
     }
-    public void Show()
+    public void Add(int[] arr2)
     {
-        Console.WriteLine(name + " got" + grade + " for exam");
+        int sumLength = arr.Length + arr2.Length;
+        int[] tmp = new int[sumLength];
+        for (int i = 0; i < arr2.Length; i++)
+        {
+            tmp[i] = arr2[i];
+
+        }
+        arr3 = tmp;
+
+        for(int i = arr + arr2; i<arr2.Length; i++)
+        { tmp[i] = arr2;                                                         
+
+        }
+
+
+
+    public string ToFullString()
+    {
+        return (name + " " + grade + " " + examDate + " " + exams);
+
+
     }
-    //string ToFullString()
-    //{ }
-}
+    public string ToShortString() 
+    {
+        return (name + " " + grade + " " + examDate + " " + averageScore);
+
+    }

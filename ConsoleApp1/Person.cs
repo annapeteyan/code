@@ -11,7 +11,6 @@ namespace ConsoleApp1
         private string _name;
         string _surname;
         DateTime _birthdayDate;
-
         public void Show()
         {
             Console.WriteLine("hello!" + _name);
